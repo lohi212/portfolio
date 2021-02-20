@@ -868,4 +868,25 @@ textarea {
 	text-align: center;
 }
 
+
+.projects-cards-container {
+	cursor: pointer; 
+	margin: 10px; 
+	height: 200px; 
+	width: 400px; 
+	border: 1px solid #cccccc;
+	text-align: center;
+	padding: 20px;
+}
+
+.projects-cards-container:hover {
+	-webkit-box-shadow: 8px 4px 10px -11px rgba(0,0,0,0.75);
+-moz-box-shadow: 8px 4px 10px -11px rgba(0,0,0,0.75);
+box-shadow: 8px 4px 10px -11px rgba(0,0,0,0.75);
+}
+
+.projects-cards-title {
+	border-bottom: 1px solid #cccccc;
+	padding-bottom: 5px;
+}
 /*# sourceMappingURL=base.css.map */
