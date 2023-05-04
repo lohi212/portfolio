@@ -1019,6 +1019,9 @@ button::-moz-focus-inner, input::-moz-focus-inner {
  *
  * ------------------------------------------------------------------- 
  */
+.white-section {
+	background: #FFFFFF;
+}
 .grey-section {
 	background: #ebebeb;
 }
@@ -1312,7 +1315,7 @@ header .logo a {
 	width: 100%;
 	height: 100%;
 	background: #111111;
-	opacity: .85;
+	opacity: .75;
 }
 
 .intro-content {
@@ -1489,7 +1492,7 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 #about {
-	background: #FFFFFF;
+	
 	padding-top: 12rem;
 	padding-bottom: 15rem;
 }
@@ -1789,7 +1792,7 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 #portfolio {
-	background: #FFFFFF;
+	background: #ebebeb;
 	padding-top: 12rem;
 	padding-bottom: 12rem;
 }
