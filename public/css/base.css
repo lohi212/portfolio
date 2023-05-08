@@ -870,11 +870,10 @@ textarea {
   cursor: pointer;
   margin: 10px;
   height: 100%;
-  min-height: 300px;
+  min-height: 350px;
   width: 400px;
   padding: 20px;
   background: #fff;
-
   border-radius: 3px;
   text-align: left;
 }
@@ -919,10 +918,25 @@ textarea {
 }
 
 .link-color {
-  color: #6e6e6e !important;
+  color: #393838 !important;
   text-decoration: underline;
 }
 
 .link-color:hover {
   color: #cc005f !important;
+}
+
+.read-more {
+  text-decoration: none;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.relative {
+  position: relative;
+}
+
+.project-page-text {
+  color:#393838;
 }
