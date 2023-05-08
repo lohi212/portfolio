@@ -30,6 +30,10 @@ body {
   margin: 0;
 }
 
+#contact, footer {
+  color: #6e6e6e;
+}
+
 article,
 aside,
 details,
