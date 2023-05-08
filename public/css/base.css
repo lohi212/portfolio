@@ -917,3 +917,12 @@ textarea {
 .p-20 {
   padding: 20px;;
 }
+
+.link-color {
+  color: #6e6e6e !important;
+  text-decoration: underline;
+}
+
+.link-color:hover {
+  color: #cc005f !important;
+}
