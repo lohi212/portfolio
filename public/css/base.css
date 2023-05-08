@@ -30,7 +30,8 @@ body {
   margin: 0;
 }
 
-#contact, footer {
+#contact,
+footer {
   color: #6e6e6e;
 }
 
@@ -882,6 +883,27 @@ textarea {
   text-align: left;
 }
 
+.blog-card {
+  cursor: pointer;
+  margin: 10px;
+  height: 100%;
+  min-height: 550px;
+  width: 45%;
+  padding: 20px;
+  background: #fff;
+  border-radius: 3px;
+  text-align: left;
+  -webkit-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card:hover {
+  -webkit-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+}
+
 .project-card:hover {
   -webkit-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
@@ -891,7 +913,7 @@ textarea {
 .project-card-title {
   border-bottom: 1px solid #cccccc;
   padding-bottom: 5px;
-  text-align: center; 
+  text-align: center;
   color: #cc005f;
 }
 
@@ -918,7 +940,7 @@ textarea {
 }
 
 .p-20 {
-  padding: 20px;;
+  padding: 20px;
 }
 
 .link-color {
@@ -942,5 +964,5 @@ textarea {
 }
 
 .project-page-text {
-  color:#393838;
+  color: #393838;
 }
