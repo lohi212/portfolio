@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../../css/base.css" />
     <link rel="stylesheet" href="../../css/main.css" />
     <link rel="stylesheet" href="../../css/vendor.css" />
+    <link rel="stylesheet" href="../../css/carousel.css" />
     <link rel="icon" type="image/png"
         href="https://res.cloudinary.com/dgvup74b7/image/upload/v1613823276/unnamed_yfdya1.jpg" />
 </head>
@@ -18,39 +19,98 @@
         <h1 class="project-card-title p-20">Movie Store</h1>
 
         <div class="p-20">
-            <div>
-                <p>
-                    An ecommerce store with search application, authentication
-                    layer, stripe payment and elastic search.
-                </p>
-                <ul>
-                    <li>
-                        <b>Tech: </b> The ecommerce apps were built on ReactJS | NextJS | Redux and VueJS | NuxtJS |
-                        VueX.
-                    </li>
-                    <li>
-                        <b>Pages: </b> These apps have a home page, search page, product page and cart page.
-                    </li>
-                    <li>
-                        <b>Authentication: </b> The applications have an 'auth0' integration for login.
-                    </li>
-                    <li>
-                        <b>Checkout: </b> The checkout in cart page is integrated with stripe.
-                    </li>
 
-                    <li>
-                        <b>Deployment: </b> The app is deployed with vercel and heroku.
-                    </li>
-                    <li>
-                        <b>Live Apps: </b>
-                        <a href="https://moviestore-vue.vercel.app/" target="_blank" class="link-color">Vue Movie Store
-                            App</a>,
-                        <a href="https://moviestore-react.vercel.app/" target="_blank" class="link-color">React Movie
-                            Store
-                            App</a>
-                    </li>
-                </ul>
+            <p>
+                An ecommerce store with search application, authentication
+                layer, stripe payment and elastic search.
+            </p>
+
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 7</div>
+                    <img src="https://imgur.com/Ij8YwDk.png" class="image-container">
+                    <div class="text">Home Page</div>
+                </div>
+
+                <div class="mySlides fade" style="transform: translateX('2000px');">
+                    <div class="numbertext">2 / 7</div>
+                    <img src="https://imgur.com/I2P28aB.png" class="image-container">
+                    <div class="text">Search query</div>
+                </div>
+
+                <div class="mySlides fade" style="transform: translateX('3000px');">
+                    <div class="numbertext">3 / 7</div>
+                    <img src="https://imgur.com/ZPXzC8E.png" class="image-container">
+                    <div class="text">Search Page</div>
+                </div>
+
+                <div class="mySlides fade" style="transform: translateX('3000px');">
+                    <div class="numbertext">4 / 7</div>
+                    <img src="https://imgur.com/7DVWYVT.png" class="image-container">
+                    <div class="text">Product Page</div>
+                </div>
+
+                <div class="mySlides fade" style="transform: translateX('3000px');">
+                    <div class="numbertext">5 / 7</div>
+                    <img src="https://imgur.com/ahWonOv.png" class="image-container">
+                    <div class="text">Cart Page</div>
+                </div>
+
+                <div class="mySlides fade" style="transform: translateX('2000px');">
+                    <div class="numbertext">6 / 7</div>
+                    <img src="https://imgur.com/CbU3BgM.png" class="image-container">
+                    <div class="text">Stripe Checkout</div>
+                </div>
+
+                <div class="mySlides fade" style="transform: translateX('2000px');">
+                    <div class="numbertext">7 / 7</div>
+                    <img src="https://imgur.com/CbU3BgM.png" class="image-container">
+                    <div class="text">Auth0 Authentication</div>
+                </div>
+
+                <a class="prev carousel-links" onclick="plusSlides(-1)">❮</a>
+                <a class="next carousel-links" onclick="plusSlides(1)">❯</a>
+
             </div>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(7)"></span>
+            </div>
+
+            <ul>
+                <li>
+                    <b>Tech: </b> The ecommerce apps were built on ReactJS | NextJS | Redux and VueJS | NuxtJS |
+                    VueX.
+                </li>
+                <li>
+                    <b>Pages: </b> These apps have a home page, search page, product page and cart page.
+                </li>
+                <li>
+                    <b>Authentication: </b> The applications have an 'auth0' integration for login.
+                </li>
+                <li>
+                    <b>Checkout: </b> The checkout in cart page is integrated with stripe.
+                </li>
+
+                <li>
+                    <b>Deployment: </b> The app is deployed with vercel and heroku.
+                </li>
+                <li>
+                    <b>Live Apps: </b>
+                    <a href="https://moviestore-vue.vercel.app/" target="_blank" class="link-color">Vue Movie Store
+                        App</a>,
+                    <a href="https://moviestore-react.vercel.app/" target="_blank" class="link-color">React Movie
+                        Store
+                        App</a>
+                </li>
+            </ul>
+
         </div>
     </section>
     <section id="contact">
@@ -161,6 +221,8 @@
         </div>
         <!-- /row -->
     </footer>
+
+    <script src="../carousel.js"></script>
 </body>
 
 </html>

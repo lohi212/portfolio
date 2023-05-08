@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../../css/base.css" />
     <link rel="stylesheet" href="../../css/main.css" />
     <link rel="stylesheet" href="../../css/vendor.css" />
+    <link rel="stylesheet" href="../../css/carousel.css" />
     <link rel="icon" type="image/png"
         href="https://res.cloudinary.com/dgvup74b7/image/upload/v1613823276/unnamed_yfdya1.jpg" />
 </head>
@@ -18,56 +19,125 @@
         <h1 class="project-card-title p-20">Code Editor</h1>
 
         <div class="p-20">
-            <div>
-                <p>
-                    A custom code editor similar to code sandbox which has custom
-                    built file explorer, code editor and a preview. This editor was built with library 'sandpack-react'
-                    using ReactJs and JavaScript.
-                </p>
-                <ul>
-                    <li>
-                        <b>File Explorer: </b> The file explorer has folders, files, .png, .ico etc files with a
-                        searchbox
-                        where files can be searched by filename. Files/ Folders can be renamed and deleted. The folders
-                        are collapsible with files in it.
-                    </li>
-                    <li>
-                        <b>Editor: </b> The code editor is a text editor built on Monaco Editor .
-                    </li>
-                    <li>
-                        <b>Preview: </b> The live UI changes can be seen in the preview using 'sanpack-react'.
-                    </li>
-                    <li>
-                        <b>Commit: </b> Each code changes can be saved with a commit id, where user can again restore to
-                        a particular commit id when needed.
-                    </li>
-                    <li>
-                        <b>Restore: </b> The list of commit ids were provided to the user, where user can switch to a
-                        particular commit id. Here user is provided with a diff table having the current changes and the
-                        changes there in the selected commit id. The diff table is built on 'react-diff-viewer'.
-                    </li>
-                    <li>
-                        <b>Deploy: </b> A particular commit id can be deployed to vercel which returns the deployed url,
-                        deployment status and the deployment logs.
-                    </li>
-                    <li>
-                        <b>Logs: </b>The logs for the live deployment happening in vercel can be seen in the UI.
-                    </li>
-                    <li>
-                        <b>Search: </b> Search works for filenames as well as file content. The content search can be
-                        done on a single file or all the files. Here the search is built on 'fuse.js'.
-                    </li>
-                    <li>
-                        <b>Upload: </b>Any local project can also be uploaded to code editor which will be saved with a
-                        new
-                        commit id.
-                    </li>
-                    <li>
-                        <b>Theme: </b> Theme switcher to switch between dark and light theme.
-                    </li>
 
-                </ul>
+            <p>
+                A custom code editor similar to code sandbox which has custom
+                built file explorer, code editor and a preview. This editor was built with library 'sandpack-react'
+                using ReactJs and JavaScript.
+            </p>
+
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 8</div>
+                    <img src="changes.png" class="image-container">
+                    <div class="text">Code Editor</div>
+                </div>
+
+                <div class="mySlides fade" style="transform: translateX('2000px');">
+                    <div class="numbertext">2 / 8</div>
+                    <img src="https://imgur.com/8SLPMvS.png" class="image-container">
+                    <div class="text">Code changes to commit</div>
+                </div>
+
+                <div class="mySlides fade" style="transform: translateX('3000px');">
+                    <div class="numbertext">3 / 8</div>
+                    <img src="https://imgur.com/GxdRBK7.png" class="image-container">
+                    <div class="text">List of commits</div>
+                </div>
+
+                <div class="mySlides fade" style="transform: translateX('2000px');">
+                    <div class="numbertext">4 / 8</div>
+                    <img src="changes.png" class="image-container">
+                    <div class="text">Code diff between current version and a particular commit id</div>
+                </div>
+
+                <div class="mySlides fade" style="transform: translateX('3000px');">
+                    <div class="numbertext">5 / 8</div>
+                    <img src="https://imgur.com/bdkFlfx.png" class="image-container">
+                    <div class="text">Deploy the code</div>
+                </div>
+
+                <div class="mySlides fade" style="transform: translateX('3000px');">
+                    <div class="numbertext">6 / 8</div>
+                    <img src="changes.png" class="image-container">
+                    <div class="text">Deployment Logs</div>
+                </div>
+
+                <div class="mySlides fade" style="transform: translateX('3000px');">
+                    <div class="numbertext">7 / 8</div>
+                    <img src="changes.png" class="image-container">
+                    <div class="text">Upload Project</div>
+                </div>
+
+                <div class="mySlides fade" style="transform: translateX('3000px');">
+                    <div class="numbertext">8 / 8</div>
+                    <img src="changes.png" class="image-container">
+                    <div class="text">Dark theme editor</div>
+                </div>
+
+
+
+                <a class="prev carousel-links" onclick="plusSlides(-1)">❮</a>
+                <a class="next carousel-links" onclick="plusSlides(1)">❯</a>
+
             </div>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(7)"></span>
+                <span class="dot" onclick="currentSlide(8)"></span>
+            </div>
+
+            <ul>
+                <li>
+                    <b>File Explorer: </b> The file explorer has folders, files, .png, .ico etc files with a
+                    searchbox
+                    where files can be searched by filename. Files/ Folders can be renamed and deleted. The folders
+                    are collapsible with files in it.
+                </li>
+                <li>
+                    <b>Editor: </b> The code editor is a text editor built on Monaco Editor .
+                </li>
+                <li>
+                    <b>Preview: </b> The live UI changes can be seen in the preview using 'sanpack-react'.
+                </li>
+                <li>
+                    <b>Commit: </b> Code changes can be saved where user can review the changes made. Changes were saved
+                    with a commit id, where user can again restore to
+                    a particular commit id when needed.
+                </li>
+                <li>
+                    <b>Restore: </b> The list of commit ids were provided to the user, where user can switch to a
+                    particular commit id. Here user is provided with a diff table having the current changes and the
+                    changes there in the selected commit id. The diff table is built on 'react-diff-viewer'.
+                </li>
+                <li>
+                    <b>Deploy: </b> A particular commit id can be deployed to vercel which returns the deployed url,
+                    deployment status and the deployment logs.
+                </li>
+                <li>
+                    <b>Logs: </b>The logs for the live deployment happening in vercel can be seen in the UI.
+                </li>
+                <li>
+                    <b>Search: </b> Search works for filenames as well as file content. The content search can be
+                    done on a single file or all the files. Here the search is built on 'fuse.js'.
+                </li>
+                <li>
+                    <b>Upload Project: </b>Any local project can also be uploaded to code editor which will be saved
+                    with a
+                    new
+                    commit id.
+                </li>
+                <li>
+                    <b>Theme: </b> Theme switcher to switch between dark and light themes.
+                </li>
+
+            </ul>
         </div>
     </section>
     <section id="contact">
@@ -178,6 +248,8 @@
         </div>
         <!-- /row -->
     </footer>
+
+    <script src="../carousel.js"></script>
 </body>
 
 </html>
