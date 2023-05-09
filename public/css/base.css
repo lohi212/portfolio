@@ -914,7 +914,7 @@ textarea {
   border-bottom: 1px solid #cccccc;
   padding-bottom: 5px;
   text-align: center;
-  color: #cc005f;
+  /* color: #cc005f; */
 }
 
 .project-card-description {
@@ -927,7 +927,7 @@ textarea {
 }
 
 .skills-container .tag {
-  color: #cc005f;
+  /* color: #cc005f; */
 }
 
 .mb-1_7 {
@@ -957,6 +957,7 @@ textarea {
   position: absolute;
   right: 20px;
   bottom: 20px;
+  color: #cc005f !important;
 }
 
 .relative {
