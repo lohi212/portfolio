@@ -1,0 +1,25 @@
+name: Deployment
+on:
+  push:
+    branches:
+      - main
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'    
+        env:
+          CI: false
+      - name: Copy folder content recursively to vps
+        uses: garygrossgarten/github-action-scp@release
+        with:
+          local: public
+          remote: /var/www/html/portfolio/public
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+      - run: echo "🍏 This job's status is ${{ job.status }}."
