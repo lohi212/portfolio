@@ -191,41 +191,41 @@
 	------------------------------------------------------ */
 
   /* local validation */
-  $("#contactForm").validate({
-    /* submit via ajax */
-    submitHandler: function (form) {
-      var sLoader = $("#submit-loader");
+  // $("#contactForm").validate({
+  //   /* submit via ajax */
+  //   submitHandler: function (form) {
+  //     var sLoader = $("#submit-loader");
 
-      $.ajax({
-        type: "POST",
-        url: "inc/sendEmail.php",
-        data: $(form).serialize(),
-        beforeSend: function () {
-          sLoader.fadeIn();
-        },
-        success: function (msg) {
-          // Message was sent
-          if (msg == "OK") {
-            sLoader.fadeOut();
-            $("#message-warning").hide();
-            $("#contactForm").fadeOut();
-            $("#message-success").fadeIn();
-          }
-          // There was an error
-          else {
-            sLoader.fadeOut();
-            $("#message-warning").html(msg);
-            $("#message-warning").fadeIn();
-          }
-        },
-        error: function () {
-          sLoader.fadeOut();
-          $("#message-warning").html("Something went wrong. Please try again.");
-          $("#message-warning").fadeIn();
-        },
-      });
-    },
-  });
+  //     $.ajax({
+  //       type: "POST",
+  //       url: "inc/sendEmail.php",
+  //       data: $(form).serialize(),
+  //       beforeSend: function () {
+  //         sLoader.fadeIn();
+  //       },
+  //       success: function (msg) {
+  //         // Message was sent
+  //         if (msg == "OK") {
+  //           sLoader.fadeOut();
+  //           $("#message-warning").hide();
+  //           $("#contactForm").fadeOut();
+  //           $("#message-success").fadeIn();
+  //         }
+  //         // There was an error
+  //         else {
+  //           sLoader.fadeOut();
+  //           $("#message-warning").html(msg);
+  //           $("#message-warning").fadeIn();
+  //         }
+  //       },
+  //       error: function () {
+  //         sLoader.fadeOut();
+  //         $("#message-warning").html("Something went wrong. Please try again.");
+  //         $("#message-warning").fadeIn();
+  //       },
+  //     });
+  //   },
+  // });
 
   /*----------------------------------------------------- */
   /* Back to top
@@ -246,3 +246,31 @@
     }
   });
 })(jQuery);
+
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const formData = {
+      name: document.getElementById("contactName").value,
+      email: document.getElementById("contactEmail").value,
+      subject: document.getElementById("contactSubject").value,
+      message: document.getElementById("contactMessage").value,
+    };
+
+    fetch("http://localhost:3000/send-email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => response.text())
+      .then((responseText) => {
+        alert(responseText);
+      })
+      .catch((error) => {
+        alert("Failed to send email: " + error.message);
+      });
+  });
