@@ -921,6 +921,12 @@ textarea {
   padding-bottom: 5px;
   text-align: center;
   /* color: #cc005f; */
+
+  min-height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: fit-content;
 }
 
 .project-card-description {
@@ -930,6 +936,7 @@ textarea {
 .skills-container {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .skills-container .tag {
