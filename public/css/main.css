@@ -1680,8 +1680,11 @@ header .logo a {
 	justify-content: center;
 	align-items: center;
 }
+.grey-color {
+	color: #313131 !important;
+}
 .grey-bg {
-	color: #313131
+	background: #313131 !important;
 }
 .company-logo {
 	border-radius: 50%;
