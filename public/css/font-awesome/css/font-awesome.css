@@ -903,6 +903,7 @@
 }
 .fa-laptop:before {
   content: "\f109";
+  color: red;
 }
 .fa-tablet:before {
   content: "\f10a";
