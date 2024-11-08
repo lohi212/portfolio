@@ -1667,7 +1667,7 @@ header .logo a {
 	height: 4.8rem;
 	width: 4.8rem;
 	line-height: 4.8rem;
-	background: #313131;
+	background: #fff;
 	border-radius: 50%;
 	text-align: center;
 	color: #FFFFFF;
@@ -1675,6 +1675,19 @@ header .logo a {
 	left: 35%;
 	top: .9rem;
 	margin-left: -2.4rem;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.grey-bg {
+	color: #313131
+}
+.company-logo {
+	border-radius: 50%;
+}
+.kosh-logo {
+	width: 80%;
 }
 #experience .timeline-ico i, #education .timeline-ico i {
 	position: relative;
